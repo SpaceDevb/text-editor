@@ -1,0 +1,316 @@
+html {
+    font-size: 16px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    font-weight: bolder;
+    font-size: 1rem;
+    cursor: pointer;
+    color: #dedede;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+textarea {
+    resize: none;
+}
+
+button:hover {
+    color: #6495ed;
+}
+
+/* Custom styles */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-container {
+    width: 80vw;
+    max-width: 768px;
+    background-color: darkslateblue;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10px;
+    padding: 1rem;
+    padding-bottom: 2rem;
+}
+
+h1 {
+    font-size: 1.3rem;
+    position: relative;
+    color: #eee;
+    letter-spacing: 1px;
+    background-color: #222;
+    margin: 0 0.5rem;
+    font-family: monospace;
+}
+
+i {
+    color: #dedede;
+    cursor: pointer;
+}
+
+i:hover {
+    color: cornflowerblue;
+}
+
+h1 span {
+    animation: wheel-color 3s infinite ease;
+}
+
+@keyframes wheel-color {
+    0% {
+        color: lightblue;
+    }
+
+    50% {
+        color: #7c6fd5;
+    }
+
+    100% {
+        color: lightblue;
+    }
+}
+
+h1::before {
+    content: "";
+    height: 1px;
+    width: 100%;
+    background-color: lightblue;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 15px;
+    animation: wheel 5s infinite ease;
+    overflow-x: hidden;
+}
+
+@keyframes wheel {
+    0% {
+        width: 0%;
+        left: 0;
+    }
+
+    20% {
+        width: 50%;
+        left: 0;
+        background-color: lightblue;
+    }
+
+    35% {
+        width: 0%;
+        left: 50%;
+        background-color: #7c6fd5;
+    }
+
+    55% {
+        width: 50%;
+        left: 50%;
+        background-color: lightblue;
+    }
+
+    70% {
+        left: 100%;
+        width: 0;
+        background-color: #7c6fd5;
+    }
+
+    80% {
+        left: 0;
+        width: 100%;
+        background-color: lightblue;
+    }
+
+    100% {
+        left: 0;
+        width: 0;
+        background-color: #7c6fd5;
+    }
+}
+
+.buttons .line {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+/* First line */
+
+.buttons .first-line > *,
+.buttons .second-line > * {
+    padding: 0.5rem;
+}
+
+.first-line .size-select,
+.first-line .family-select {
+    outline: none;
+    cursor: pointer;
+    margin: 0 0.25rem;
+}
+
+.first-line .size-select:hover,
+.first-line .family-select:hover {
+    opacity: 0.8;
+}
+
+/* Second line */
+
+.buttons .second-line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #dedede;
+    font-weight: 600;
+}
+
+.second-line .spacing {
+    outline: none;
+    cursor: pointer;
+    margin: 0 0.25rem;
+}
+
+.second-line .spacing:hover {
+    opacity: 0.8;
+}
+
+.second-line input {
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.second-line div {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* Textarea */
+
+textarea {
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    margin-top: 1rem;
+    padding: 1rem;
+}
+
+/* Utility class dynamics */
+
+.active {
+    background-color: #fff5;
+    border-radius: 5px;
+    color: darkslateblue;
+    padding: 0.4rem;
+}
+
+textarea.h1 {
+    font-size: 3rem;
+}
+
+textarea.h2 {
+    font-size: 2.5rem;
+}
+
+textarea.h3 {
+    font-size: 2rem;
+}
+
+textarea.h4 {
+    font-size: 1.5rem;
+}
+
+textarea.h5 {
+    font-size: 1rem;
+}
+
+textarea.h6 {
+    font-size: 0.5rem;
+}
+
+textarea.bold {
+    font-weight: bold;
+}
+
+textarea.upperCase {
+    text-transform: uppercase;
+}
+
+textarea.alignLeft {
+    text-align: left;
+}
+
+textarea.alignCenter {
+    text-align: center;
+}
+
+textarea.alignRight {
+    text-align: right;
+}
+
+textarea.arial {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea.georgia {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+textarea.courier {
+    font-family: Courier, monospace;
+}
+
+textarea.cursive {
+    font-family: cursive;
+}
+
+textarea.fantasy {
+    font-family: fantasy;
+}
+
+/* textarea.spacing1px {
+    word-spacing: 1px;
+}
+
+textarea.spacing2px {
+    word-spacing: 2px;
+}
+
+textarea.spacing3px {
+    word-spacing: 3px;
+}
+
+textarea.spacing4px {
+    word-spacing: 4px;
+}
+
+textarea.spacing5px {
+    word-spacing: 5px;
+}
+textarea.spacing6px {
+    word-spacing: 6px;
+} */

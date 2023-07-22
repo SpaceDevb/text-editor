@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Text Editor</title>
+        <!-- Custom stylecheat -->
+        <link rel="stylesheet" href="css/main.css" />
+
+        <!-- Font-awesome stylecheat -->
+        <link rel="stylesheet" href="css/all.min.css" />
+    </head>
+    <body>
+        <!-- Main container -->
+        <main class="main-container">
+            <!-- Buttons -->
+            <article class="buttons">
+                <div class="first-line line">
+                    <h1><span>Space.then</span> Text Editor</h1>
+                    <button class="btn bold">B</button>
+                    <button class="btn toCase">Xx</button>
+
+                    <i class="fas fa-align-left"></i>
+                    <i class="fas fa-align-center"></i>
+                    <i class="fas fa-align-right"></i>
+                    
+                    </button>
+                    <select class="size-select">
+                        <option value="title">SIZE</option>
+                        <option value="h1">H1</option>
+                        <option value="h2">H2</option>
+                        <option value="h3">H3</option>
+                        <option value="h4">H4</option>
+                        <option value="h5">H5</option>
+                        <option value="h6">H6</option>
+                    </select>
+                    <select class="family-select">
+                        <option value="title">FONT</option>
+                        <option value="arial">Arial</option>
+                        <option value="georgia">Georgia</option>
+                        <option value="courier">Courier</option>
+                        <option value="cursive">Cursive</option>
+                        <option value="fantasy">Fantasy</option>
+                    </select>
+                </div>
+                <div class="second-line line">
+                    <select name="spacing" class="spacing">
+                        <option value="1px">1px</option>
+                        <option value="2px">2px</option>
+                        <option value="3px">3px</option>
+                        <option value="4px">4px</option>
+                        <option value="5px">5px</option>
+                        <option value="6px">6px</option>
+                    </select>
+                    <label for="spacing">Word spacing</label>
+                    <div>
+                        <input type="color" name="color" class="font-color" />
+                        <label for="color">Font Color</label>
+                    </div>
+                    
+                </div>
+            </article>
+
+            <!-- Textarea -->
+            <textarea cols="70" rows="18" class="textarea"> </textarea>
+        </main>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>
